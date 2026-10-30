@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixaro.it | Professionisti per la Casa a Tariffe Orarie -18%</title>
+    <meta name="description" content="Prenota idraulici, elettricisti, montatori mobili, imbianchini e tuttofare in tutta Italia. Tariffe orarie trasparenti inferiori del 18% rispetto a TaskRabbit, ProntoPro e Instapro.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #dbeafe 0%, #f8fafc 45%, #ecfdf5 100%);
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium">
+        <span class="inline-flex items-center gap-2">
+            <span class="bg-accent-500 text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase">Novità 2026</span>
+            <span>Rivoluzione nei servizi per la casa: <strong>-18% sulle tariffe orarie</strong> rispetto alla media dei portali tradizionali!</span>
+            <a href="#calcolatore" class="underline hover:text-accent-500 ml-1 font-semibold">Calcola il tuo risparmio &rarr;</a>
+        </span>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-11 h-11 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+                    <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-900">Fixaro<span class="text-brand-600">.it</span></span>
+                    <span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 -mt-1">Casa & Professionisti</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                <a href="#servizi" class="hover:text-brand-600 transition">Servizi & Tariffe</a>
+                <a href="#calcolatore" class="hover:text-brand-600 transition">Preventivo Istantaneo</a>
+                <a href="#confronto" class="hover:text-brand-600 transition">Perché -18%?</a>
+                <a href="#clienti" class="hover:text-brand-600 transition">Per i Clienti</a>
+                <a href="#professionisti" class="hover:text-brand-600 transition">Per i Professionisti</a>
+                <a href="#contatti" class="hover:text-brand-600 transition">Contatti</a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="mailto:professionisti@fixaro.it?subject=Candidatura%20Professionista%20-%20Fixaro.it&body=Salve%20team%20Fixaro,%0A%0AVoglio%20unirmi%20alla%20rete%20di%20professionisti%20Fixaro.%0A-%20Nome%20e%20Cognome:%20%0A-%20Specializzazione:%20%0A-%20Citt%C3%A0%20operativa:%20%0A-%20Telefono:%20" 
+                   class="px-4 py-2.5 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 border border-slate-300 transition">
+                    Diventa un Fixer
+                </a>
+                <a href="mailto:clienti@fixaro.it?subject=Richiesta%20Intervento%20-%20Fixaro.it&body=Salve%20team%20Fixaro,%0A%0AVorrei%20prenotare%20un%20professionista:%0A-%20Servizio%20richiesto:%20%0A-%20Citt%C3%A0%20e%20CAP:%20%0A-%20Giorno/Ora%20preferiti:%20%0A-%20Recapito%20telefonico:%20" 
+                   class="px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-600 text-white hover:bg-brand-700 shadow-md shadow-brand-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> Prenota Ora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                        Zero costi di intermediazione inutili • Tariffe -18% garantite
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+                        Il professionista giusto per la tua casa, <span class="text-brand-600">al 18% in meno.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
+                        Uniamo la velocità di prenotazione istantanea di <strong>TaskRabbit</strong> con la rete capillare di <strong>ProntoPro</strong> e <strong>Instapro</strong>, eliminando i costosi crediti a pagamento per gli artigiani. Il risultato? <strong>Tu risparmi il 18%</strong> e il professionista guadagna il giusto.
+                    </p>
+
+                    <!-- Quick Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#calcolatore" class="px-7 py-4 rounded-2xl bg-brand-600 text-white font-bold text-base hover:bg-brand-700 shadow-xl shadow-brand-500/25 transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-calculator"></i> Calcola Preventivo (-18%)
+                        </a>
+                        <a href="mailto:clienti@fixaro.it?subject=Richiesta%20Rapida%20-%20Fixaro.it&body=Salve%20Fixaro,%0A%0AHo%20bisogno%20di%20un%20preventivo%20per:%20" class="px-7 py-4 rounded-2xl bg-white text-slate-800 font-bold text-base hover:bg-slate-100 border border-slate-300 shadow-sm transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-600"></i> Richiedi via Email
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200/80 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-shield-halved text-brand-600 text-lg"></i>
+                            <span class="font-semibold text-slate-700">Professionisti Verificati</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-tags text-emerald-600 text-lg"></i>
+                            <span class="font-semibold text-slate-700">Prezzo Orario Fisso -18%</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-lock text-amber-500 text-lg"></i>
+                            <span class="font-semibold text-slate-700">Garanzia Soddisfatti 100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Instant Estimator (-18% Calculator) -->
+                <div id="calcolatore" class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/90 p-6 sm:p-8 relative">
+                        <div class="absolute -top-4 right-6 bg-emerald-600 text-white text-xs font-extrabold px-3.5 py-1.5 rounded-full shadow-md">
+                            RISPARMIO IMMEDIATO -18%
+                        </div>
+
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-1">Preventivatore Istantaneo</h2>
+                        <p class="text-sm text-slate-500 mb-6">Confronta la tariffa oraria media di mercato in Italia con Fixaro.it</p>
+
+                        <div class="space-y-5">
+                            <!-- Service Selector -->
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">1. Seleziona il Servizio</label>
+                                <select id="serviceSelect" onchange="calculatePrice()" class="w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 font-semibold focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 outline-none">
+                                    <option value="45">Idraulico & Termoidraulica (Media mercato: 45,00 €/h)</option>
+                                    <option value="42">Elettricista & Domotica (Media mercato: 42,00 €/h)</option>
+                                    <option value="30">Montaggio Mobili & IKEA (Media mercato: 30,00 €/h)</option>
+                                    <option value="28">Tuttofare & Piccole Riparazioni (Media mercato: 28,00 €/h)</option>
+                                    <option value="30">Imbianchino & Cartongesso (Media mercato: 30,00 €/h)</option>
+                                    <option value="35">Traslochi & Facchinaggio (Media mercato: 35,00 €/h)</option>
+                                    <option value="30">Giardinaggio & Potatura (Media mercato: 30,00 €/h)</option>
+                                    <option value="18">Pulizie Casa & Sanificazione (Media mercato: 18,00 €/h)</option>
+                                </select>
+                            </div>
+
+                            <!-- Hours Slider -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-slate-600">2. Durata Stimata Intervento</label>
+                                    <span id="hoursDisplay" class="text-sm font-extrabold text-brand-600 bg-brand-50 px-3 py-1 rounded-lg">2 Ore</span>
+                                </div>
+                                <input id="hoursInput" type="range" min="1" max="10" value="2" oninput="calculatePrice()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                                <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-1">
+                                    <span>1 ora</span>
+                                    <span>5 ore</span>
+                                    <span>10 ore</span>
+                                </div>
+                            </div>
+
+                            <!-- Price Breakdown Box -->
+                            <div class="bg-slate-900 text-white rounded-2xl p-5 space-y-3">
+                                <div class="flex justify-between items-center text-sm text-slate-400">
+                                    <span>Prezzo medio altri portali:</span>
+                                    <span id="competitorTotal" class="line-through font-semibold">90,00 €</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm text-emerald-400 font-semibold">
+                                    <span>Tuo risparmio netto (-18%):</span>
+                                    <span id="savingsAmount">- 16,20 €</span>
+                                </div>
+                                <div class="border-t border-slate-700 pt-3 flex justify-between items-baseline">
+                                    <div>
+                                        <span class="text-sm font-bold block">Totale Fixaro.it</span>
+                                        <span id="hourlyFixaro" class="text-xs text-slate-400">Tariffa: 36,90 €/ora</span>
+                                    </div>
+                                    <span id="fixaroTotal" class="text-3xl font-extrabold text-white">73,80 €</span>
+                                </div>
+                            </div>
+
+                            <a id="bookCalculatorBtn" href="mailto:clienti@fixaro.it?subject=Prenotazione%20con%20Tariffa%20Bloccata%20-18%25" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center block shadow-lg shadow-emerald-600/25 transition">
+                                <i class="fa-solid fa-calendar-check mr-2"></i> Blocca Questa Tariffa via Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- All Services Covered (TaskRabbit + ProntoPro + Instapro Categories) -->
+    <section id="servizi" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest">Catalogo Completo Servizi</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tutti i servizi per la casa e l'ufficio in un unico portale</h2>
+            <p class="text-slate-600 mt-3">Abbiamo unito le categorie di pronto intervento, montaggio e ristrutturazione con tariffe orarie ribassate del 18%.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Category 1: Idraulico -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Idraulica & Caldaie</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Perdite d'acqua, disostruzione scarichi, sostituzione rubinetteria, sanitari, manutenzione caldaie e climatizzatori.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 45,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">36,90 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 2: Elettricista -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Elettricista & Domotica</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Ricerca guasti e cortocircuiti, quadri elettrici, salvavita, installazione lampadari LED, citofoni e smart home.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 42,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">34,40 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 3: Montaggio Mobili & IKEA -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Montaggio Mobili & IKEA</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Montaggio e smontaggio armadi, cucine, letti, scrivanie, fissaggio sicuro a parete di mensole, specchi e TV.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 30,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">24,60 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 4: Tuttofare -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Tuttofare & Riparazioni</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Riparazione tapparelle, serrature, porte, finestre, zanzariere, sigillature in silicone e piccoli lavori domestici.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 28,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">22,90 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 5: Imbianchino & Ristrutturazioni -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Imbianchino & Cartongesso</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Tinteggiatura interni ed esterni, trattamenti antimuffa, stuccatura, pareti divisorie e controsoffitti in cartongesso.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 30,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">24,60 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 6: Traslochi & Facchinaggio -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Traslochi & Sgomberi</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Aiuto trasloco, imballaggio, carico/scarico furgoni, trasporto elettrodomestici pesanti e sgombero cantine o solai.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 35,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">28,70 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 7: Giardinaggio -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Giardinaggio & Esterni</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Taglio erba, potatura siepi e alberi, pulizia giardini, installazione impianti di irrigazione e cura terrazzi.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 30,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">24,60 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+
+            <!-- Category 8: Pulizie -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900">Pulizie & Sanificazione</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Pulizie domestiche profonde, pulizie post-ristrutturazione o fine locazione, lavaggio vetri, divani e uffici.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400 line-through block">Media: 18,00 €/h</span>
+                        <span class="text-lg font-extrabold text-brand-600">14,75 €<span class="text-xs font-normal text-slate-500">/ora</span></span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">-18%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor Comparison Section -->
+    <section id="confronto" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest">Innovazione di Mercato</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Perché Fixaro.it costa il 18% in meno?</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                    Nei portali tradizionali i professionisti devono pagare "crediti" costosi solo per inviarti un preventivo o subire commissioni elevate. Su Fixaro abbiamo azzerato i costi di contatto: il professionista risparmia sui costi pubblicitari e tu risparmi il 18% sulla tariffa oraria.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-slate-800/60 rounded-2xl overflow-hidden border border-slate-700">
+                    <thead>
+                        <tr class="border-b border-slate-700 text-xs sm:text-sm uppercase text-slate-400 bg-slate-800">
+                            <th class="p-4 sm:p-5">Caratteristica</th>
+                            <th class="p-4 sm:p-5 text-emerald-400 font-extrabold text-base bg-emerald-950/40">Fixaro.it</th>
+                            <th class="p-4 sm:p-5">TaskRabbit</th>
+                            <th class="p-4 sm:p-5">ProntoPro / Instapro</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700/70 text-sm">
+                        <tr>
+                            <td class="p-4 sm:p-5 font-semibold">Tariffe Orarie</td>
+                            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-emerald-950/20"><i class="fa-solid fa-check-circle mr-1"></i> -18% sulla media nazionale</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Tariffa standard + Fee checkout</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Variabile (spesso ricaricata)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-5 font-semibold">Costo per i Professionisti per inviare preventivi</td>
+                            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-emerald-950/20"><i class="fa-solid fa-check-circle mr-1"></i> 0,00 € (Gratis al 100%)</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Quota registrazione + Fee</td>
+                            <td class="p-4 sm:p-5 text-rose-400">Pagano crediti per ogni risposta</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-5 font-semibold">Tempi di Prenotazione</td>
+                            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-emerald-950/20"><i class="fa-solid fa-check-circle mr-1"></i> Immediato con tariffa chiara</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Immediato</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Attesa di più preventivi (24-48h)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 sm:p-5 font-semibold">Garanzia Scudo & Assistenza Diretta</td>
+                            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-emerald-950/20"><i class="fa-solid fa-check-circle mr-1"></i> Inclusa senza sovrapprezzo</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Con sovrapprezzo % in fattura</td>
+                            <td class="p-4 sm:p-5 text-slate-300">Solo recensioni verificate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Section: Per i Clienti & Per i Professionisti -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        
+        <!-- For Customers -->
+        <div id="clienti" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brand-50 text-brand-700 text-xs font-extrabold uppercase">
+                    <i class="fa-solid fa-user-shield"></i> Guida Completa per i Clienti
+                </div>
+                <h2 class="text-3xl font-extrabold text-slate-900">Come funziona Fixaro per i Clienti?</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Che tu abbia bisogno di montare un armadio IKEA, riparare una perdita idraulica urgente o tinteggiare l'intero appartamento, Fixaro ti garantisce professionisti qualificati con identità verificata e prezzi trasparenti.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-5 pt-2">
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <span class="text-brand-600 font-extrabold text-lg">01. Scegli e Calcola</span>
+                        <p class="text-xs text-slate-600 mt-1">Usa il nostro calcolatore per conoscere subito la tariffa oraria scontata del 18% senza sorprese finali.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <span class="text-brand-600 font-extrabold text-lg">02. Prenotazione Diretta</span>
+                        <p class="text-xs text-slate-600 mt-1">Invia la richiesta a <strong>clienti@fixaro.it</strong> indicando città, servizio e orario preferito.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <span class="text-brand-600 font-extrabold text-lg">03. Intervento Garantito</span>
+                        <p class="text-xs text-slate-600 mt-1">Il Fixer certificato arriva puntuale a domicilio con tutta l'attrezzatura professionale necessaria.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <span class="text-brand-600 font-extrabold text-lg">04. Pagamento a Lavoro Finito</span>
+                        <p class="text-xs text-slate-600 mt-1">Paghi solo quando il lavoro è completato a regola d'arte e lasci la tua recensione verificata.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-brand-50 rounded-2xl p-7 border border-brand-100 space-y-5">
+                <h3 class="text-xl font-extrabold text-slate-900">Sportello Diretto Clienti</h3>
+                <p class="text-sm text-slate-600">Hai bisogno di un intervento rapido o di un preventivo personalizzato per più lavori?</p>
+                <ul class="space-y-2.5 text-sm text-slate-700">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Risposta rapida in meno di 30 minuti</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Assegnazione del miglior tecnico di zona</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Copertura assicurativa inclusa</li>
+                </ul>
+                <a href="mailto:clienti@fixaro.it?subject=Richiesta%20Servizio%20Clienti%20-%20Fixaro.it&body=Salve%20Reparto%20Clienti%20Fixaro,%0A%0AVorrei%20richiedere%20un%20professionista:%0A-%20Servizio:%20%0A-%20Citt%C3%A0%20e%20Indirizzo:%20%0A-%20Data%20preferita:%20%0A-%20Telefono:%20" 
+                   class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-center block shadow-md transition">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Scrivi a clienti@fixaro.it
+                </a>
+            </div>
+        </div>
+
+        <!-- For Professionals -->
+        <div id="professionisti" class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 sm:p-12 shadow-xl grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-extrabold uppercase">
+                    <i class="fa-solid fa-briefcase"></i> Programma Partner & Artigiani
+                </div>
+                <h2 class="text-3xl font-extrabold">Sei un Professionista o Artigiano? Lavora con Fixaro!</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Basta spendere centinaia di euro al mese in "crediti" per inviare preventivi a clienti che non rispondono. Su Fixaro.it <strong>ricevi incarichi reali e confermati nella tua città a costo zero di iscrizione</strong>.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
+                        <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-ban mr-1.5"></i> Zero Crediti da Comprare</h4>
+                        <p class="text-xs text-slate-300 mt-1">Non paghi mai per contattare il cliente. Tratteniamo solo una minima commissione a lavoro incassato.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
+                        <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-calendar-days mr-1.5"></i> Massima Libertà</h4>
+                        <p class="text-xs text-slate-300 mt-1">Decidi tu le tue zone operative, i giorni lavorativi e accetti solo i lavori che preferisci.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
+                        <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-wallet mr-1.5"></i> Pagamenti Rapidi in 24h</h4>
+                        <p class="text-xs text-slate-300 mt-1">Incassi garantiti e puntuali direttamente sul tuo conto corrente appena terminato l'intervento.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
+                        <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-award mr-1.5"></i> Più Clienti Fedeli</h4>
+                        <p class="text-xs text-slate-300 mt-1">Grazie alle tariffe trasparenti -18%, i clienti scelgono Fixaro molto più velocemente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-800 rounded-2xl p-7 border border-slate-700 space-y-5">
+                <h3 class="text-xl font-extrabold text-white">Candidatura Rapida Fixer</h3>
+                <p class="text-sm text-slate-300">Cerchiamo idraulici, elettricisti, montatori mobili, tuttofare, imbianchini, traslocatori e imprese di pulizie in tutta Italia.</p>
+                <div class="bg-slate-900/70 rounded-xl p-4 text-xs text-slate-300 space-y-1.5 border border-slate-700/80">
+                    <p class="font-bold text-white">Requisiti richiesti:</p>
+                    <p>• Esperienza comprovata nel settore scelto</p>
+                    <p>• Attrezzatura propria e puntualità</p>
+                    <p>• Documento d'identità valido (con o senza P.IVA in base al volume)</p>
+                </div>
+                <a href="mailto:professionisti@fixaro.it?subject=Candidatura%20Nuovo%20Professionista%20-%20Fixaro.it&body=Salve%20Team%20Partner%20Fixaro,%0A%0ADesidero%20candidarmi%20come%20professionista%20su%20Fixaro.it:%0A-%20Nome%20e%20Cognome:%20%0A-%20Settore/Specializzazione:%20%0A-%20Citt%C3%A0%20e%20Provincia:%20%0A-%20Anni%20di%20esperienza:%20%0A-%20Numero%20di%20Telefono:%20" 
+                   class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold text-center block shadow-lg transition">
+                    <i class="fa-solid fa-user-plus mr-2"></i> Invia Candidatura a professionisti@fixaro.it
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Dedicated Email & Contact Hub (3 Official Channels) -->
+    <section id="contatti" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest">Canali Ufficiali Diretti</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Centro Contatti & Assistenza Fixaro.it</h2>
+                <p class="text-slate-600 mt-3">Abbiamo creato tre linee email dedicate per garantirti una gestione immediata e specializzata in base alle tue esigenze.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- 1. Email Clienti -->
+                <div class="rounded-3xl p-8 bg-slate-50 border-2 border-brand-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">1. Reparto Clienti</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Prenotazioni & Preventivi</h3>
+                        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                            Dedicato ai clienti che desiderano prenotare un intervento a domicilio, richiedere un preventivo su misura o modificare un appuntamento.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <p class="text-xs text-slate-400 font-medium mb-1">Indirizzo Email Ufficiale:</p>
+                        <p class="text-lg font-extrabold text-slate-900 mb-4 select-all">clienti@fixaro.it</p>
+                        <a href="mailto:clienti@fixaro.it?subject=Richiesta%20Servizio%20-%20Fixaro.it&body=Salve%20team%20Fixaro,%0A%0AVorrei%20richiedere%20un%20intervento%20per:%0A-%20Tipo%20di%20servizio:%20%0A-%20Citt%C3%A0%20/%20Indirizzo:%20%0A-%20Data%20e%20ora%20preferita:%20%0A-%20Telefono:%20" 
+                           class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm text-center block transition">
+                            <i class="fa-solid fa-envelope-open-text mr-2"></i> Contatta Reparto Clienti
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Email Professionisti -->
+                <div class="rounded-3xl p-8 bg-slate-50 border-2 border-emerald-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-600">2. Reparto Professionisti</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Affiliazione & Artigiani</h3>
+                        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                            Dedicato a idraulici, elettricisti, montatori, tuttofare e imprese che vogliono iscriversi gratuitamente e ricevere lavori nella propria zona.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <p class="text-xs text-slate-400 font-medium mb-1">Indirizzo Email Ufficiale:</p>
+                        <p class="text-lg font-extrabold text-slate-900 mb-4 select-all">professionisti@fixaro.it</p>
+                        <a href="mailto:professionisti@fixaro.it?subject=Candidatura%20Professionista%20-%20Fixaro.it&body=Salve%20team%20Fixaro,%0A%0AVoglio%20unirmi%20alla%20rete%20di%20professionisti%20Fixaro.%0A-%20Nome%20e%20Cognome:%20%0A-%20Specializzazione:%20%0A-%20Citt%C3%A0%20operativa:%20%0A-%20Telefono:%20" 
+                           class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm text-center block transition">
+                            <i class="fa-solid fa-handshake mr-2"></i> Contatta Reparto Professionisti
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Email Supporto -->
+                <div class="rounded-3xl p-8 bg-slate-50 border-2 border-amber-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600">3. Assistenza & Garanzia</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Supporto Tecnico 24/7</h3>
+                        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                            Dedicato al supporto post-intervento, attivazione della Garanzia Scudo Fixaro, fatturazione, pagamenti e assistenza generale.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200">
+                        <p class="text-xs text-slate-400 font-medium mb-1">Indirizzo Email Ufficiale:</p>
+                        <p class="text-lg font-extrabold text-slate-900 mb-4 select-all">supporto@fixaro.it</p>
+                        <a href="mailto:supporto@fixaro.it?subject=Richiesta%20Assistenza%20-%20Fixaro.it&body=Salve%20Supporto%20Fixaro,%0A%0AHo%20bisogno%20di%20assistenza%20riguardo:%0A-%20Numero/Dettaglio%20Servizio:%20%0A-%20Messaggio:%20" 
+                           class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm text-center block transition">
+                            <i class="fa-solid fa-life-ring mr-2"></i> Contatta il Supporto
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <span class="text-xl font-extrabold text-white">Fixaro<span class="text-brand-500">.it</span></span>
+                <span class="text-xs text-slate-500 ml-2">© 2026 Tutti i diritti riservati.</span>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 text-xs font-semibold">
+                <a href="mailto:clienti@fixaro.it" class="hover:text-white transition">clienti@fixaro.it</a>
+                <a href="mailto:professionisti@fixaro.it" class="hover:text-white transition">professionisti@fixaro.it</a>
+                <a href="mailto:supporto@fixaro.it" class="hover:text-white transition">supporto@fixaro.it</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Calculator Script -->
+    <script>
+        function calculatePrice() {
+            const marketRate = parseFloat(document.getElementById('serviceSelect').value);
+            const hours = parseInt(document.getElementById('hoursInput').value);
+            const serviceText = document.getElementById('serviceSelect').options[document.getElementById('serviceSelect').selectedIndex].text.split('(')[0].trim();
+
+            // 18% Discount calculation
+            const fixaroHourly = marketRate * 0.82;
+            const competitorTotal = marketRate * hours;
+            const fixaroTotal = fixaroHourly * hours;
+            const savings = competitorTotal - fixaroTotal;
+
+            // Update UI
+            document.getElementById('hoursDisplay').innerText = hours + (hours === 1 ? ' Ora' : ' Ore');
+            document.getElementById('competitorTotal').innerText = competitorTotal.toFixed(2).replace('.', ',') + ' €';
+            document.getElementById('savingsAmount').innerText = '- ' + savings.toFixed(2).replace('.', ',') + ' €';
+            document.getElementById('hourlyFixaro').innerText = 'Tariffa Fixaro: ' + fixaroHourly.toFixed(2).replace('.', ',') + ' €/ora';
+            document.getElementById('fixaroTotal').innerText = fixaroTotal.toFixed(2).replace('.', ',') + ' €';
+
+            // Update dynamic mailto link with calculated quote
+            const subject = encodeURIComponent(`Prenotazione ${serviceText} (${hours}h) - Tariffa -18%`);
+            const body = encodeURIComponent(
+                `Salve Reparto Clienti Fixaro,\n\n` +
+                `Vorrei prenotare il seguente servizio calcolato sul sito:\n` +
+                `- Servizio: ${serviceText}\n` +
+                `- Durata stimata: ${hours} ore\n` +
+                `- Tariffa Fixaro (-18%): ${fixaroTotal.toFixed(2).replace('.', ',')} € (invece di ${competitorTotal.toFixed(2).replace('.', ',')} €)\n\n` +
+                `I miei dati:\n` +
+                `- Nome e Cognome: \n` +
+                `- Città e Indirizzo: \n` +
+                `- Data preferita: \n` +
+                `- Telefono: `
+            );
+            document.getElementById('bookCalculatorBtn').href = `mailto:clienti@fixaro.it?subject=${subject}&body=${body}`;
+        }
+
+        // Initialize on load
+        window.onload = calculatePrice;
+    </script>
+</body>
+</html>
